@@ -14,5 +14,8 @@ server.use(express.json());
 server.use(middleware.logger);
 server.use("/api/posts", postsRouter);
 server.use("/api/users", usersRouter);
+server.get('/', (req,res)=>{
+    res.(200).json({messege:'Server runing'})
+})
 
 module.exports = server;
